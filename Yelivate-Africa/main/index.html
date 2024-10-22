@@ -1,0 +1,658 @@
+<html lang="en" class="hydrated" style="--pericles-word-background: rgba(9, 46, 140, 0.92); --pericles-section-background: rgba(255, 254, 219, 1.54);"><head>
+    <meta charset="UTF-8"><style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yelivate Africa</title>
+  
+    <!--
+      - favicon
+    -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./static/assets/css/style.css">
+  
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;family=Rubik:wght@400;500;600;700&amp;family=Shadows+Into+Light&amp;display=swap" rel="stylesheet">
+  
+    <!--
+      - preload images
+    -->
+    <link rel="preload" as="image" href="./static/assets/images/hero-banner.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="./static/assets/images/hero-banner-bg.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="./static/assets/images/hero-bg.jpg">
+  
+  <style>._pericles_action_prev,
+  ._pericles_action_next,
+  ._pericles_action_play,
+  ._pericles_action_stop,
+  ._pericles_action_pause {
+    cursor: pointer;
+    font-size: 19px;
+  }
+  
+  ._pericles_action_prev:hover,
+  ._pericles_action_next:hover,
+  ._pericles_action_play:hover,
+  ._pericles_action_stop:hover,
+  ._pericles_action_pause:hover {
+    font-size: 20px;
+  }
+  
+  ._pericles_action_prev:active,
+  ._pericles_action_next:active,
+  ._pericles_action_play:active,
+  ._pericles_action_stop:active,
+  ._pericles_action_pause:active {
+    font-size: 19px;
+  }
+  
+  img._pericles_action_icon {
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: top !important;
+    opacity: 0.9 !important;
+  }
+  
+  img._pericles_action_icon:hover {
+    opacity: 1 !important;
+  }
+  
+  ps-section,
+  ps-word {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ps-word[data-audio-index]:hover {
+    background: #ccc;
+    cursor: crosshair;
+  }
+  
+  ps-section {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  ps-section:hover {
+    background: var(--pericles-section-background);
+  }
+  
+  ._pericles_action_container {
+    border-radius: 4px;
+    width: 50px;
+    /* width: 74px; */
+    height: 26px;
+    /* background: linear-gradient(180deg, #ccc, transparent); */
+    background: #eee;
+    line-height: 32px;
+    transition: opacity 0.55s ease-in-out;
+    -moz-transition: opacity 0.55s ease-in-out;
+    -webkit-transition: opacity 0.55s ease-in-out;
+  }
+  
+  ._pericles_inspector {
+    border: 1px solid #000;
+    background-color: rgba(102, 136, 253, 0.2) !important;
+    color: #000 !important;
+    /* opacity: 0.6; */
+  }
+  
+  @keyframes _periclesFadeOut {
+    0% {
+      background: #ccc;
+      color: #000;
+    }
+  
+    100% {
+      background: transparent;
+      color: inherit;
+    }
+  }
+  ._pericles_word_tracker_style_fade,
+  ._pericles_prev_word_tracker_style_fade {
+    border-radius: 2px;
+    text-shadow: none;
+  }
+  
+  ._pericles_prev_word_tracker_style_fade {
+    background: transparent;
+    animation: _periclesFadeOut 2s ease-out;
+    color: inherit;
+  }
+  
+  rect._pericles_section_highlight_style_background {
+    fill: var(--pericles-section-background);
+    opacity: 0.4;
+  }
+  
+  ._pericles_section_highlight_style_background {
+    background: var(--pericles-section-background);
+  }
+  
+  ._pericles_section_highlight_style_border {
+    border: 1px solid var(--pericles-section-background);
+  }
+  
+  rect._pericles_section_highlight_style_border {
+    stroke: var(--pericles-section-background);
+  }
+  
+  ._pericles_word_tracker_style_background {
+    background: var(--pericles-word-background);
+  }
+  
+  ._pericles_word_tracker_style_underline {
+    border-top: 1px solid var(--pericles-word-background);
+    border-bottom: 1px solid var(--pericles-word-background);
+  }
+  
+  ._pericles_word_tracker_style_fade {
+    background: var(--pericles-word-background);
+    color: #fff;
+  }
+  </style></head>
+  
+  <body id="top">
+  
+    <!--
+      - #HEADER
+    -->
+  
+    <header class="header" data-header="">
+      <div class="container">
+  
+        <h1>
+          <a href="#" class="logo">Yelivate <span class="span">Africa</span></a>
+        </h1>
+  
+        <nav class="navbar" data-navbar="">
+          <ul class="navbar-list">
+  
+            <li class="nav-item">
+              <a href="#home" class="navbar-link" data-nav-link="">Home</a>
+            </li>
+  
+            <li class="nav-item">
+              <a href="#about" class="navbar-link" data-nav-link="">About Us</a>
+            </li>
+  
+            <li class="nav-item">
+              <a href="#blog" class="navbar-link" data-nav-link="">Blog</a>
+            </li>
+  
+            <li class="nav-item">
+              <a href="#" class="navbar-link" data-nav-link="">Contact Us</a>
+            </li>
+  
+          </ul>
+        </nav>
+  
+        <div class="header-btn-group">
+          <button class="search-btn" aria-label="Search" data-search-btn="">
+            <ion-icon name="search-outline" role="img" class="md hydrated" aria-label="search outline"></ion-icon>
+          </button>
+  
+          <button class="btn btn-hover">Register</button>
+  
+          <button class="nav-toggle-btn" aria-label="Toggle values" data-values-toggle-btn="">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+          </button>
+        </div>
+  
+      </div>
+    </header>
+  
+  
+  
+  
+  
+    <!--
+      - #SEARCH BOX
+    -->
+  
+    <div class="search-container" data-search-container="">
+  
+      <div class="search-box">
+        <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..." class="search-input">
+  
+        <button class="search-submit" aria-label="Submit search" data-search-submit-btn="">
+          <ion-icon name="search-outline" role="img" class="md hydrated" aria-label="search outline"></ion-icon>
+        </button>
+      </div>
+  
+      <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn=""></button>
+  
+    </div>
+  
+  
+  
+  
+  
+    <main>
+      <article>
+  
+        <!--
+          - #HERO
+        -->
+  
+        <section class="hero" id="home" style="background-image: url('./static/assets/images/hero-bg.jpg')">
+          <div class="container">
+  
+            <div class="hero-content">
+  
+              <p class="hero-subtitle">- Yelivate Africa -</p>
+  
+              <h2 class="h1 hero-title">Incubation Zone of Impact</h2>
+  
+              <p class="hero-text">At Yelivate Africa, our mission is to empower individuals to lead a purposeful, happy, and fulfilling lives. Through technology, talent, and unity, we will raise our continent’s consiousness to create a sustainable African society that is free from poverty and mental health challenges.</p>
+  
+              <button class="btn">Read Our Articles</button>
+  
+            </div>
+          </div>
+        </section>
+   
+  
+        <!--
+          - #yel values
+        -->
+  
+        <section class="section yel-values" id="yel-values">
+          <div class="container">
+  
+            <p class="section-subtitle">Why Yelivate Africa?</p>
+            <h2 class="h2 section-title">
+              <span class="span"> What We Believe In </span>
+            </h2>
+  
+            <div class="container">
+  
+              <ul class="promo-list has-scrollbar">
+    
+                <li class="promo-item">
+                  <div class="promo-card">
+    
+                    <h3 class="h3 card-title">Individual's Potential</h3>
+    
+                    <p class="card-text">
+                      Our inner strength and potential that we all want to realize and amplify.
+                    </p>
+                 </div>
+                </li>
+    
+                <li class="promo-item">
+                  <div class="promo-card">
+     
+                    <h3 class="h3 card-title">Positive Contribution</h3>
+    
+                    <p class="card-text">
+                      A genuine desire to live a thriving and fulfiling life and to help others.
+                    </p>
+          </div>
+                </li>
+    
+                <li class="promo-item">
+                  <div class="promo-card">
+
+                    <h3 class="h3 card-title">Evidence-Based Approaches</h3>
+    
+                    <p class="card-text">
+                      Strategies grounded in solid evidence and research that leads to success.
+                    </p>
+                  </div>
+                </li>
+    
+                <li class="promo-item">
+                  <div class="promo-card">
+     
+                    <h3 class="h3 card-title">Synergistic Collaborations</h3>
+    
+                    <p class="card-text">
+                      Working together with diverse partners amplifies our collective impact.
+                    </p>
+                  </div>
+                </li>
+                    
+                <li class="promo-item">
+                  <div class="promo-card">
+   
+                    <h3 class="h3 card-title">Transformative Relationships</h3>
+    
+                    <p class="card-text">
+                      Building meaningful connections fosters personal and communal growth.
+                    </p>
+                  </div>
+                </li>
+    
+              </ul>
+            </div>
+          </div>
+        </section>
+  
+  
+  
+  
+        <!--
+          - #CTA
+        -->
+  
+        <section class="section section-divider cta">
+          <div class="container">
+            
+          
+            
+            <div class="cta-content">
+  
+              <h2 class="h2 section-title">
+                We are all broken, hopeless, and helpless,
+                <span class="span">but we'll fix ourselves!</span>
+              </h2>
+  
+              <p class="section-text">
+                Yes, we're all fucked up guys. We are experiencing the worst moments of our lives. We're broke. We're powerless. We're weak. And broken hearted. If not ourselves, then who cares?
+                
+                Let's all unite and fix ourselves. Let's save this generation. Let's join hands and fight. Let's fight poverty. Let's fight mental health. Together, we shall win.
+                </p>
+  
+              <button class="btn btn-hover">Join us today</button>
+            </div>
+          </div>
+
+          <div class="cta-banner">
+          </div>
+        </section>
+
+
+        <!--
+          - #BLOG
+        -->
+  
+        <section class="section section-divider white blog" id="blog">
+          <div class="container">
+  
+            <p class="section-subtitle">Latest Blog Posts</p>
+  
+            <h2 class="h2 section-title">
+              This Is All About <span class="span">Getting Better</span>
+            </h2>
+  
+            <p class="section-text">
+              Let's Grow Together.
+            </p>
+  
+            <ul class="blog-list">
+  
+              <li>
+                <div class="blog-card">
+  
+                  <div class="card-banner">
+                    <img src="./static/assets/images/blog-1.jpg" width="600" height="390" loading="lazy" alt="What Do You Think About Cheese Pizza Recipes?" class="w-100">
+  
+                    <div class="badge">Personal Finance</div>
+                  </div>
+  
+                  <div class="card-content">
+  
+                    <div class="card-meta-wrapper">
+  
+                      <a href="#" class="card-meta-link">
+                        <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline"></ion-icon>
+  
+                        <time class="meta-info" datetime="2024-04-07">Apr 07 2024</time>
+                      </a>
+  
+                      <a href="#" class="card-meta-link">
+                        <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
+  
+                        <p class="meta-info">Benard Kiplangat</p>
+                      </a>
+  
+                    </div>
+  
+                    <h3 class="h3">
+                      <a href="#" class="card-title">What Do You Think About Savings?</a>
+                    </h3>
+  
+                    <p class="card-text">
+                      Can saving money in your bank help you become rich? Can you strategically save...                  </p>
+  
+                    <a href="#" class="btn-link">
+                      <span>Read More</span>
+  
+                      <ion-icon name="arrow-forward" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="blog-card">
+  
+                  <div class="card-banner">
+                    <img src="./static/assets/images/blog-2.jpg" width="600" height="390" loading="lazy" alt="Making Chicken Strips With New Delicious Ingridents." class="w-100">
+  
+                    <div class="badge">Personal Development</div>
+                  </div>
+  
+                  <div class="card-content">
+  
+                    <div class="card-meta-wrapper">
+  
+                      <a href="#" class="card-meta-link">
+                        <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline"></ion-icon>
+  
+                        <time class="meta-info" datetime="2022-01-01">Apr 07 2024</time>
+                      </a>
+  
+                      <a href="#" class="card-meta-link">
+                        <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
+  
+                        <p class="meta-info">Benard Kiplangat</p>
+                      </a>
+  
+                    </div>
+  
+                    <h3 class="h3">
+                      <a href="#" class="card-title">How can you overcome chronic procrastination?</a>
+                    </h3>
+  
+                    <p class="card-text">
+                      Leaving for tomorrow again today what will change your life is not celebratory ...                  </p>
+  
+                    <a href="#" class="btn-link">
+                      <span>Read More</span>
+  
+                      <ion-icon name="arrow-forward" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="blog-card">
+  
+                  <div class="card-banner">
+                    <img src="./static/assets/images/blog-3.jpg" width="600" height="390" loading="lazy" alt="Innovative Hot Chessyraw Pasta Make Creator Fact." class="w-100">
+  
+                    <div class="badge">Mental health</div>
+                  </div>
+  
+                  <div class="card-content">
+  
+                    <div class="card-meta-wrapper">
+  
+                      <a href="#" class="card-meta-link">
+                        <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline"></ion-icon>
+  
+                        <time class="meta-info" datetime="2022-01-01">Apr 07 2024</time>
+                      </a>
+  
+                      <a href="#" class="card-meta-link">
+                        <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
+  
+                        <p class="meta-info">Benard Kiplangat</p>
+                      </a>
+  
+                    </div>
+  
+                    <h3 class="h3">
+                      <a href="#" class="card-title">How Stress can Affect the Quality of Your Life</a>
+                    </h3>
+  
+                    <p class="card-text">
+                      Research shows that constant stress has led to a lower quality of life and ...
+                    </p>
+  
+                    <a href="#" class="btn-link">
+                      <span>Read More</span>
+  
+                      <ion-icon name="arrow-forward" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+            </ul>
+  
+          </div>
+        </section>
+  
+  
+  
+  
+  
+      </article>
+    </main>
+  
+  
+  
+  
+  
+    <!--
+      - #FOOTER
+    -->
+  
+    <footer class="footer">
+  
+      <div class="footer-top">
+        <div class="container">
+  
+          <div class="footer-brand">
+  
+            <a href="" class="logo">Yelivate <span class="span"> Africa</span></a>
+  
+            <p class="footer-text">
+              Have hope of a better future. Never lose your spark. We're growing better everyday...
+            </p>
+  
+            <ul class="social-list">
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest" role="img" class="md hydrated" aria-label="logo pinterest"></ion-icon>
+                </a>
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Contact Info</p>
+            </li>
+  
+            <li>
+              <p class="footer-list-item">+254 726 645 655</p>
+            </li>
+  
+            <li>
+              <p class="footer-list-item">ben@yelivate.africa</p>
+            </li>
+  
+            <li>
+              <address class="footer-list-item">Bomet, Nairobi, Kenya</address>
+            </li>
+  
+          </ul> 
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright-text">
+            © 2024 <a href="https://www.linkedin.com/in/benard-kiplangat/" class="copyright-link"> Benard Kiplangat </a> All Rights Reserved.
+          </p>
+        </div>
+      </div>
+  
+    </footer>
+  
+  
+  
+  
+  
+    <!--
+      - #BACK TO TOP
+    -->
+  
+    <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn="">
+      <ion-icon name="chevron-up" role="img" class="md hydrated" aria-label="chevron up"></ion-icon>
+    </a>
+  
+  
+  
+  
+  
+    <!--
+      - custom js link
+    -->
+    <script src="./static/assets/js/script.js" defer=""></script>
+  
+    <!--
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+  <iframe id="_pericles_content_iframe" style="position: absolute; top: -99px; left: 0px; width: 50px; height: 26px; background: transparent; overflow: visible; margin-top: -30px; transition: top 2s ease-in-out 0s; z-index: 2147483647; border: none; padding: 0px;"></iframe></body></html>
